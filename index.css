@@ -1,0 +1,231 @@
+body {
+    background-color: #f4f4f4;
+    font-family: 'Century Gothic', monospace;   
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+body.no-scroll{
+    overflow: hidden;
+}
+#blur{
+    background-color: #f4f4f4;
+    font-family: 'Century Gothic', monospace;   
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    transition: 0.5s;
+}
+#blur.active{
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+    overflow: hidden;
+}
+
+/*Header elements style*/
+.header{
+    background-color: #8a8a8a; 
+    padding: 24px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%; 
+    height: 200px;
+    
+}
+#logo{
+    max-height: 110px;
+}
+#searchBar{
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #acacac; 
+    border-radius: 19px;
+    width: 500px;
+    height: 20px;
+    font-family: 'Century Gothic', monospace;
+    box-shadow: 0 4px 8px rgba(58, 58, 58, 0.2);
+}
+
+.header-action{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.DropdownContainer{
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 8px;
+    box-shadow: 0 4px 8px rgba(58, 58, 58, 0.2);
+}
+#searchDropdown{
+    border: 0px;
+    font-family: 'Century Gothic', monospace; 
+}
+.new-Data{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #272727;
+    font-family: 'Century Gothic', monospace; 
+    font-weight: bolder;
+    font-size: 17px;
+}
+
+/*Film card style*/
+.film-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    justify-content: center;
+    gap: 20px;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.film-card {
+    position: relative;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(58, 58, 58, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.film-card img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.film-card .film-Infos1 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 13px;
+    padding-right: 13px; 
+    
+}
+
+.film-card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.film-Infos2 {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+
+#S-infos{
+    font-size: 12px;
+    color: #747474;
+}
+button {
+    background-color: #fff;
+    color: #999999;
+    border-width: 1px;
+    border-color: #999999;
+    border-radius: 5px;
+    padding: 7px;
+    transition: all 0.3s ease-in-out;
+}
+button:hover{
+    background-color: #272727;
+    color: #fff;
+    cursor: pointer;
+    transform: scale(1.07);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/*Pop-up elements style*/
+#popup{
+    visibility: hidden;
+    opacity: 0;
+    display:flex;
+    flex-direction: column;
+    position:fixed;
+    top: 1%;
+    left: 25%;
+    z-index: 1;
+    width: 50%;
+    /* height: auto; */
+    overflow: auto;
+    max-height: 910px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(58, 58, 58, 0.1);
+    background-color: rgb(255, 255, 255);
+
+    transform: translate(0 , 1%);
+    transition: 0.5s;
+}
+#popup.active{
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+#popup img{
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+#popup.active img{
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+.Pop-up-lower-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 23px;
+}
+.Pop-up-lower-container1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+}
+.Pop-up-lower-container2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+.close-button{
+    position: absolute;
+    background-color: #fff;
+    color: #999999;
+    border-width: 0px;
+    margin-top: 10px;
+    margin-left: 12px;
+    border-color: #999999;
+    border-radius: 30px;
+    padding: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+.close-button:hover{
+    
+    background-color: #272727;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transform: scale(1.07);
+}
+
+
+

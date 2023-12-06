@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+<body>  
+    <div id="popup"></div>
+    <div id="blur">
+    <header class="header">   
+        <a href="index.html" class="logo"><img src="image/kindpng_834491.png" alt="Ghibli Studio Logo" id="logo"></a><br>    
+        <div class="header-action" id="header-action">
+            <input type="text" id="searchBar" placeholder="   Recherche par titre de film"><br>
+            <div class="DropdownContainer" id="DropdownContainer">
+                <select name="Tri par" id="searchDropdown">
+                    <option value="rien" disabled selected style="display:none;">Trier par :</option>
+                    <option value="rt_score">Score RT (décroissant)</option>
+                    <option value="running_time">Durée (décroissante)</option>
+                    <option value="release_date">Plus récents</option>
+                </select>
+            </div>  
+        </div>
+    </header>
+    <main>
+        <div id="filmList" class="film-grid"></div>
+    </main>
+    </div>  
+</body>
+</html>
