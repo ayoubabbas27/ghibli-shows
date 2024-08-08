@@ -1,4 +1,4 @@
-# Ghibli Shows CRUD Application
+# Ghibli Shows CRUD Application (Front-end)
 
 ## Overview
 This project is a simple web application that interacts with the GhibliAPI to manage a collection of Studio Ghibli movies. The application showcases the implementation of CRUD (Create, Read, Update, Delete) operations, allowing users to view, add, update, and delete movie records.
